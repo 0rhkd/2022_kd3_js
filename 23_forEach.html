@@ -1,0 +1,31 @@
+<body>
+    <script>
+        const c = () => {
+            console.log(1 / 0);
+            console.log([][1]);
+        }
+        const b = () => {
+            c()
+        }
+
+        const a = () => {
+            b()
+        }
+
+        a();
+
+        
+        // const animals = ['🐶', '🐱', '🐷'];
+        // // for (시작값; 조건식; 증감식)
+        // // for - in => index/key
+        // for (let key in animals) { }
+
+        // // for - of => value
+        // for (let value of animals) { }
+
+        // // array api forEach => 다양한 요소를 반환
+        // animals.forEach((a, b, c) => {
+        //     console.log(a, b, c);
+        // } );
+    </script>
+</body>
