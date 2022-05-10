@@ -1,0 +1,12 @@
+<body>
+    <h1>제목</h1>
+    <script>
+        const h3 = document.createElement('h3');
+        const text = document.createTextNode('Sub');
+        h3.append(text);
+        document.body.append(h3);
+
+        document.body.innerHTML += `<h3>sub2</h3>`;
+        // document.body.innerHTML = `<u>test</u>`;
+    </script>
+</body>

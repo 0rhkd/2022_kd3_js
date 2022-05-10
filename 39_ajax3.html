@@ -1,0 +1,28 @@
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const data = axios({
+            url: 'https://newsapi.org/v2/top-headlines?country=kr&apiKey=9f5baf7d9f3f42879a20d7d19d9886e4',
+            method: 'get',
+            params: {
+                'key': 'value'
+            }
+        });
+        data.then(function (result) {
+            let articles = result.data['articles'];
+            for(let article of articles) {
+                let title = article['title'];
+                let urlToImage = article['urlToImage'];
+                let publishedAt = article['publishedAt'];
+                let code = `
+                  <div>
+                    <h3>${title}</h3>
+                    <img src='${urlToImage}' width='150px'>
+                    <h5>${publishedAt}</h5>
+                  </div>
+                `;
+                document.body.innerHTMl += code;
+            }            
+        });
+    </script>
+</body>
